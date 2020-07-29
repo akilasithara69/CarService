@@ -83,24 +83,56 @@ public class CarClean extends javax.swing.JFrame {
             Logger.getLogger(CarClean.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        // HashMap a=new HashMap();
-        // a.put("invo",keyid);
-        // try {
-        //     JasperDesign jdesign=JRXmlLoader.load("C:\\Users\\akila\\Documents\\NetBeansProjects\\CarClean\\src\\CarCleanShop\\carReport.jrxml");
-        //     JasperReport jreport=JasperCompileManager.compileReport(jdesign);
-        //     JasperPrint jprint=JasperFillManager.fillReport(jreport, a, con);
-        //     JasperViewer.viewReport(jprint,false);
+        HashMap a=new HashMap();
+        a.put("invo",keyid);
+        try {
+            JasperDesign jdesign=JRXmlLoader.load("C:\\Users\\akila\\Documents\\NetBeansProjects\\CarClean\\src\\CarCleanShop\\carReport.jrxml");
+            JasperReport jreport=JasperCompileManager.compileReport(jdesign);
+            JasperPrint jprint=JasperFillManager.fillReport(jreport, a, con);
+            JasperViewer.viewReport(jprint,false);
             
             
             
             
-        // } catch (JRException ex) {
-        //     Logger.getLogger(CarClean.class.getName()).log(Level.SEVERE, null, ex);
-        // }
+        } catch (JRException ex) {
+            Logger.getLogger(CarClean.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         
     }
     
+     private void txtnoActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        // TODO add your handling code here:
+    }     
+
+    private void chkupActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        // TODO add your handling code here:
+        txtup.requestFocus();
+    }                                     
+
+    private void chkfullActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+          txtfull.requestFocus();
+    }                                       
+
+    private void chkscreenActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+        txtscreen.requestFocus();
+    }                                         
+
+    private void chkdashActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        txtdash.requestFocus();
+    }                                       
+
+    private void chkroofActionPerformed(java.awt.event.ActionEvent evt) {                                        
+       
+        txtroof.requestFocus();
+    }                                       
+
+    private void chkseatActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+         txtseat.requestFocus();
+    }                     
     
 
 
