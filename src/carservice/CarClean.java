@@ -29,6 +29,80 @@ public class CarClean extends javax.swing.JFrame {
          return con;
     }
 
+    // create the sales method
+
+    DefaultTableModel df;
+    
+    public void sales(){
+        con=connect();
+        int total=Integer.parseInt(txttotal.getText());
+        int pay=Integer.parseInt(txtpay.getText());
+        String carno=txtno.getText();
+        int balance=0;
+        if(total<=pay){
+            balance=pay-total;
+            txtbalance.setText(Integer.toString(balance));
+        }
+        
+        try {
+            PreparedStatement pre=con.prepareStatement("insert into cartable(carno,total,pay,balance) values(?,?,?,?)");
+            pre.setString(1, carno);
+            pre.setInt(2,total);
+            pre.setInt(3,pay);
+            pre.setInt(4,balance);
+            pre.executeUpdate();
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(CarClean.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        int keyid=0;
+        try {
+            PreparedStatement pl=con.prepareStatement("select * from cartable");
+            ResultSet re=pl.executeQuery();
+            
+            while(re.next()){
+                keyid=re.getInt(1);
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(CarClean.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+       String str="insert into car_product(clean_id,clean_type,price) values(?,?,?)";
+        try {
+            PreparedStatement pt=con.prepareStatement(str);
+            
+            for(int j=0;j<jTable1.getRowCount();j++){
+                pt.setInt(1, keyid);
+                pt.setString(2,jTable1.getValueAt(j,0).toString());
+                pt.setInt(3,Integer.parseInt(jTable1.getValueAt(j,1).toString()));
+                pt.executeUpdate();
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(CarClean.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        // HashMap a=new HashMap();
+        // a.put("invo",keyid);
+        // try {
+        //     JasperDesign jdesign=JRXmlLoader.load("C:\\Users\\akila\\Documents\\NetBeansProjects\\CarClean\\src\\CarCleanShop\\carReport.jrxml");
+        //     JasperReport jreport=JasperCompileManager.compileReport(jdesign);
+        //     JasperPrint jprint=JasperFillManager.fillReport(jreport, a, con);
+        //     JasperViewer.viewReport(jprint,false);
+            
+            
+            
+            
+        // } catch (JRException ex) {
+        //     Logger.getLogger(CarClean.class.getName()).log(Level.SEVERE, null, ex);
+        // }
+        
+        
+    }
+    
+    
+
 
 
     @SuppressWarnings("unchecked")
