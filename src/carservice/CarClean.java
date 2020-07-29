@@ -259,6 +259,10 @@ public class CarClean extends javax.swing.JFrame {
         txtfloor.requestFocus();
     } 
 
+     private void txtupActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        // TODO add your handling code here:
+    }  
+
 
 
 
