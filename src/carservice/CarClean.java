@@ -269,6 +269,17 @@ public class CarClean extends javax.swing.JFrame {
     }   
 
 
+    private void txtfullActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+    }                                       
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        sales();
+        
+
+        
+    }         
+
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
