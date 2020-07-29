@@ -274,11 +274,25 @@ public class CarClean extends javax.swing.JFrame {
     }                                       
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        sales();
-        
+        sales();  
+    }    
 
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {                                  
+        // TODO add your handling code here:
+      
+    }                                 
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        txtno.setText("");
+        txtname.setText("");
         
-    }         
+        txttotal.setText("");
+        txtpay.setText("");
+        txtbalance.setText("");
+        
+        df.setRowCount(0);
+    }          
 
 
     @SuppressWarnings("unchecked")
