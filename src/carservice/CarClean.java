@@ -254,6 +254,12 @@ public class CarClean extends javax.swing.JFrame {
     }  
 
 
+     private void chkfloorActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+        txtfloor.requestFocus();
+    } 
+
+
 
 
     @SuppressWarnings("unchecked")
