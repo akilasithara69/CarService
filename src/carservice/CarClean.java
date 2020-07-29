@@ -134,6 +134,122 @@ public class CarClean extends javax.swing.JFrame {
          txtseat.requestFocus();
     }                     
     
+    // create the jbutton actionperform
+
+     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        int sum=0;
+        
+        if(chkdash.isSelected()){
+            txtdash.requestFocus();
+            df=(DefaultTableModel)jTable1.getModel();
+            String dash=chkdash.getText();
+            
+            df.addRow(new Object[]{
+                dash,
+                txtdash.getText()
+            }
+                    
+                    );
+        }
+        
+        if(chkup.isSelected()){
+            
+            df=(DefaultTableModel)jTable1.getModel();
+            String dash=chkup.getText();
+            df.addRow(new Object[]{
+                dash,
+                txtup.getText()
+            }
+                    
+                    );
+        }
+        
+        if(chkroof.isSelected()){
+            txtroof.requestFocus();
+            df=(DefaultTableModel)jTable1.getModel();
+            String dash=chkroof.getText();
+            df.addRow(new Object[]{
+                dash,
+                txtroof.getText()
+            }
+                    
+                    );
+        }
+        
+        if(chkfloor.isSelected()){
+            txtfloor.requestFocus();
+            df=(DefaultTableModel)jTable1.getModel();
+            String dash=chkfloor.getText();
+            df.addRow(new Object[]{
+                dash,
+                txtfloor.getText()
+            }
+                    
+                    );
+        }
+        
+        if(chkseat.isSelected()){
+            txtseat.requestFocus();
+            df=(DefaultTableModel)jTable1.getModel();
+            String dash=chkseat.getText();
+            df.addRow(new Object[]{
+                dash,
+                txtseat.getText()
+            }
+                    
+                    );
+        }
+        
+        if(chkfull.isSelected()){
+            txtfull.requestFocus();
+            df=(DefaultTableModel)jTable1.getModel();
+            String dash=chkfull.getText();
+            df.addRow(new Object[]{
+                dash,
+                txtfull.getText()
+            }
+                    
+                    );
+        }
+        
+        if(chkscreen.isSelected()){
+            txtscreen.requestFocus();
+            df=(DefaultTableModel)jTable1.getModel();
+            String dash=chkscreen.getText();
+            df.addRow(new Object[]{
+                dash,
+                txtscreen.getText()
+            }
+                    
+                    );
+        }
+        int tot=0;
+        for(int i=0;i<jTable1.getRowCount();i++){
+           tot=tot+Integer.parseInt(jTable1.getValueAt(i, 1).toString());
+        }
+        
+        txttotal.setText(Integer.toString(tot));
+        
+        chkdash.setSelected(false); // this is used to clear the checkbox,
+        chkup.setSelected(false);
+        chkroof.setSelected(false);
+        chkfloor.setSelected(false);
+        chkseat.setSelected(false);
+        chkfull.setSelected(false);
+        chkscreen.setSelected(false);
+        
+        
+        txtdash.setText("");
+        txtup.setText("");
+        txtroof.setText("");
+        txtfloor.setText("");
+        txtseat.setText("");
+        txtfull.setText("");
+        txtscreen.setText("");
+    }
+
+
+    
 
 
 
