@@ -248,8 +248,11 @@ public class CarClean extends javax.swing.JFrame {
         txtscreen.setText("");
     }
 
+// make the txtbalanceActionPerformed method
+  private void txtbalanceActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        // TODO add your handling code here:
+    }  
 
-    
 
 
 
