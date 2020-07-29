@@ -352,4 +352,45 @@ public class CarClean extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JCheckBox chkdash;
+    private javax.swing.JCheckBox chkfloor;
+    private javax.swing.JCheckBox chkfull;
+    private javax.swing.JCheckBox chkroof;
+    private javax.swing.JCheckBox chkscreen;
+    private javax.swing.JCheckBox chkseat;
+    private javax.swing.JCheckBox chkup;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextField txtbalance;
+    private javax.swing.JTextField txtdash;
+    private javax.swing.JTextField txtfloor;
+    private javax.swing.JTextField txtfull;
+    private javax.swing.JTextField txtname;
+    private javax.swing.JTextField txtno;
+    private javax.swing.JTextField txtpay;
+    private javax.swing.JTextField txtroof;
+    private javax.swing.JTextField txtscreen;
+    private javax.swing.JTextField txtseat;
+    private javax.swing.JTextField txttotal;
+    private javax.swing.JTextField txtup;
+    // End of variables declaration          
+
+
+
 }
